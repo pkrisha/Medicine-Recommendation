@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us - Health Care Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        :root {
+            --pastel-mint: #B8E6B8;
+            --pastel-blue: #A8D8EA;
+            --pastel-lavender: #D4B5F7;
+            --pastel-peach: #FFD3A5;
+            --pastel-rose: #FFC1CC;
+            --pastel-sage: #C8E6C9;
+            --soft-white: #FEFEFE;
+            --gentle-gray: #F5F7FA;
+            --medical-teal: #4ECDC4;
+            --medical-navy: #2C3E50;
+            --medical-success: #27AE60;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--gentle-gray) 0%, var(--soft-white) 100%);
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* Navigation Styling */
+        .navbar {
+            background: linear-gradient(135deg, var(--medical-teal), var(--pastel-blue)) !important;
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.2);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white !important;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem !important;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .logo img {
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Content Container */
+        .content-container {
+            background: linear-gradient(135deg, var(--pastel-mint), var(--pastel-sage));
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+
+        /* Typography */
+        h4 {
+            color: var(--medical-navy);
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        h4:first-child {
+            margin-top: 0;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        h4:not(:first-child):before {
+            content: "";
+            position: absolute;
+            top: -1rem;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--medical-teal), var(--pastel-blue));
+            border-radius: 2px;
+        }
+
+        p {
+            color: var(--medical-navy);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        /* Email styling */
+        p b {
+            color: var(--medical-teal);
+            font-weight: 700;
+        }
+
+        /* Contact Info Card */
+        .contact-info {
+            background: rgba(255,255,255,0.6);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 2px solid var(--pastel-blue);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Social Media Icons */
+        .social-section {
+            background: rgba(255,255,255,0.4);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 2px solid var(--pastel-lavender);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .facebook {
+            background: linear-gradient(135deg, #3b5998, #4267B2);
+        }
+
+        .instagram {
+            background: linear-gradient(135deg, #E4405F, #C13584, #833AB4);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Support Section */
+        .support-section {
+            background: linear-gradient(135deg, var(--pastel-peach), #FFE4B5);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid var(--pastel-peach);
+        }
+
+        /* Animation for page load */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-container {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            h4:first-child {
+                font-size: 2rem;
+            }
+            
+            h4 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .social-icons {
+                gap: 1rem;
+            }
+            
+            .social-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- Logo at the top-left corner -->
+            <div class="logo">
+                <img class="myimg" src="{{ url_for('static', filename='img.png') }}" alt="Health Center Logo">
+            </div>
+
+            <a class="navbar-brand" href="#">Health Center</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-4 mt-4">
+        <div class="content-container">
+            <h4>📞 Contact Us</h4>
+            <p>Have questions or need assistance? We're here to help! Our health care center is committed to providing you with the best possible care and support.</p>
+
+            <div class="support-section">
+                <h4>🏥 Customer Support</h4>
+                <p>Our dedicated customer support team is available to assist you with any inquiries or issues you may have. Whether it's a technical question, feedback, or a general inquiry, we're just a message away. Our team of healthcare professionals is ready to guide you through your health journey.</p>
+            </div>
+
+            <h4>📧 Get in Touch</h4>
+            <p>Feel free to reach out to us via email or through our various communication channels. We value your feedback and are committed to providing you with the best possible experience. Your health and satisfaction are our top priorities.</p>
+            
+            <div class="contact-info">
+                <p><b>📧 Email:</b> krisha.patel17103@gmail.com</p>
+                <p><b>📞 Phone:</b> +91 (Available 24/7)</p>
+                <p><b>🕒 Support Hours:</b> 24/7 Emergency Support</p>
+                <p><b>📍 Location:</b> Health Care Center, Medical District</p>
+            </div>
+
+            <div class="social-section">
+                <h4>🌐 Stay Connected</h4>
+                <p>Stay up-to-date with the latest news, updates, and health tips by following us on social media. Connect with us on Facebook or Instagram to join our growing community of health-conscious individuals.</p>
+                
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook" title="Follow us on Facebook">
+                        📘
+                    </a>
+                    <a href="#" class="social-icon instagram" title="Follow us on Instagram">
+                        📷
+                    </a>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-lavender)); border-radius: 15px; padding: 2rem; margin: 2rem 0; text-align: center; border: 2px solid var(--pastel-blue);">
+                <h4>💙 We Care About Your Health</h4>
+                <p style="margin-bottom: 0; font-size: 1.1rem; font-style: italic;">Your health is our priority. Don't hesitate to reach out whenever you need medical guidance or support. We're here to help you live a healthier, happier life.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
